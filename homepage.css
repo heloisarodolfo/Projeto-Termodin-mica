@@ -1,0 +1,15 @@
+h1{
+    font-family: 'Kanit', sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin: 2rem;
+    border: 5px solid black;
+    justify-items: justify;
+    border-radius: 10px;
+}
+
+ul {
+    padding: 20px;
+}
