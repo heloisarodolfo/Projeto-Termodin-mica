@@ -1,15 +1,77 @@
+body {
+    background-color: rgb(22, 22, 22); 
+}
+
+
 h1{
-    font-family: 'Kanit', sans-serif;
-}
-
-.container {
+    color: white;
+    font-family: 'DM Sans', sans-serif;
     text-align: center;
-    margin: 2rem;
-    border: 5px solid black;
-    justify-items: justify;
+    background-color: rgb(31, 31, 31);
+    padding: 4rem;
     border-radius: 10px;
+    border-bottom: 5px solid rgb(130, 32, 221);
 }
 
-ul {
-    padding: 20px;
+#background{
+    background-color: rgb(36, 36, 36);
+    border-radius: 10px;
+
+}
+
+#textintro{
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+    color: white;
+    margin: 3rem;
+    padding-bottom: 2rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+
+nav{
+    display: flex;
+    font-family: 'Kanit', sans-serif;
+    padding: 0.5rem;
+    color: rgb(255, 255, 255);
+}
+
+nav li{
+    list-style: none;
+    padding: 0.5rem;
+    display: inline;
+}
+
+li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: large;
+    transition: 0.2s;
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
+
+li a:hover{
+    background-color: rgb(46, 46, 46);
+    color: rgb(130, 32, 221);
+}
+
+#empty{
+    border: solid 2px rgb(36, 36, 36);
+    border-radius: 5px;
+    margin-top: 10rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 10rem;
+}
+
+p {
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    margin-left: 1rem;
+    margin-bottom: 7rem;
 }
