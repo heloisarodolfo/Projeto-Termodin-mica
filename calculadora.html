@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/calculadora.css">
+</head>
+
+<body>
+    <div>
+        <br>
+        <a href="index.html">Voltar</a>
+    </div>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <div id="trabalhorealizado">
+        <h2>Trabalho Realizado (τ)</h2>
+        <p>Insira o valor da Fonte Quente (Q1)</p>
+        <input type="number" id="fonteq">
+        <p>Insira o valor da Fonte Fria (Q2)</p>
+        <input type="number" id="fontef">
+        <br>
+        <br>
+        <input type="button" value="Calcular" onclick="calculartrab()" id="button1">
+        <p>Resultado</p>
+        <p id="saidatrab"></p>
+        <input type="button" value="Limpar" onclick="limpartrab()" id="button1">
+        <script>
+
+            function calculartrab() {
+
+                var fonteq = document.getElementById("fonteq")
+                var fontef = document.getElementById("fontef")
+                var quente = Number(fonteq.value)
+                var fria = Number(fontef.value)
+                var resptrab = quente - fria
+                document.getElementById("saidatrab").innerHTML = resptrab
+
+                localStorage.setItem('resptrab', resptrab)
+                localStorage.setItem('fontecalor', quente)
+                localStorage.setItem('fontefria', fria)
+                if (localStorage.getItem('resptrab') != null) {
+                    var RespostaTrab = JSON.parse(localStorage.getItem('resptrab'))
+                }
+            }
+
+            function limpartrab() {
+                fonteq = (" ")
+                fontef = (" ")
+                var limpfonteq = document.getElementById("fonteq").value = limpfonteq
+                var limpfontef = document.getElementById("fontef").value = limpfontef
+                document.getElementById("saidatrab").innerHTML = " "
+            }
+
+        </script>
+    </div>
+
+    <div id="rendimento">
+        <h2>Rendimento (η)</h2>
+        <p>Insira a quantidade de Trabalho (τ)</p>
+        <input type="number" id="trabrendimento">
+        <p>Insira o valor da Fonte Quente (Q1)</p>
+        <input type="number" id="quenterendimento">
+        <br>
+        <br>
+        <input type="button" value="Calcular" onclick="calcularrend()" id="button1">
+        <p>Resultado</p>
+        <p id="saidarend"></p>
+        <input type="button" value="Limpar" onclick="limparrend()" id="button1">
+        <script>
+
+            function calcularrend() {
+                var trabrendimento = document.getElementById("trabrendimento")
+                var quenterendimento = document.getElementById("quenterendimento")
+                var rendtrab = Number(trabrendimento.value)
+                var rendquente = Number(quenterendimento.value)
+                var resprend = rendtrab / rendquente
+                document.getElementById("saidarend").innerHTML = resprend
+
+                localStorage.setItem('resprend', resprend)
+                localStorage.setItem('quenterendimento', quenterendimento)
+                localStorage.setItem('trabrendimento', trabrendimento)
+                if (localStorage.getItem('resprend') != null) {
+                    var SaidaRend = JSON.parse(localStorage.getItem('resprend'))
+            }
+        }
+
+            function limparrend() {
+                trabrendimento = (" ")
+                quenterendimento = (" ")
+                var limptrabrendimento = document.getElementById("trabrendimento").value = limptrabrendimento
+                var limpquenterendimento = document.getElementById("quenterendimento").value = limpquenterendimento
+                document.getElementById("saidarend").innerHTML = " "
+            }
+        </script>
+    </div>
+
+    <div id="variaçaoenergiaint">
+        <h2>Variação de Energia Interna (ΔU)</h2>
+        <p>Insira a quantidade de calor (Q)</p>
+        <input type="number" id="calor1">
+        <p>Insira quantidade de trabalho (τ)</p>
+        <input type="number" id="trabalho1">
+        <br>
+        <br>
+        <input type="button" value="Calcular" onclick="calcularenergint()" id="button1">
+        <p>Resultado</p>
+        <p id="saidaenergint"></p>
+        <input type="button" value="Limpar" onclick="limparenergint()" id="button1">
+        <script>
+
+            function calcularenergint() {
+                var calor1 = document.getElementById("calor1")
+                var trabalho1 = document.getElementById("trabalho1")
+                var n1 = Number(calor1.value)
+                var n2 = Number(trabalho1.value)
+                var res = n1 - n2
+                document.getElementById("saidaenergint").innerHTML = res
+
+                localStorage.setItem('res', res)
+                localStorage.setItem('calor1', calor1)
+                localStorage.setItem('trabalho1', trabalho1)
+                if (localStorage.getItem('res') != null) {
+                    var RespostaTrab = JSON.parse(localStorage.getItem('res'))
+            }
+        }
+
+            function limparenergint() {
+                calor1 = (" ")
+                trabalho1 = (" ")
+                var limpcalor1 = document.getElementById("calor1").value = limpcalor1
+                var limptrabalho1 = document.getElementById("trabalho1").value = limptrabalho1
+                document.getElementById("saidaenergint").innerHTML = " "
+            }
+
+        </script>
+    </div>
+
+</body>
+
+</html>
