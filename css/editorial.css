@@ -1,31 +1,11 @@
 body {
-    background-color: #091a34 (20,20,20); 
-
+    background-color: rgb(46, 46, 46);
 }
-
-h1{
-    color: white;
-    font-family: 'DM Sans', sans-serif;
-    text-align: center;
-    background-color: #091a34;
-    padding: 4rem;
-    border-radius: 10px;
-    border-bottom: 5px solid rgb(130, 32, 221);
-}
-
-.container {
-    border: 1px solid rgb(17, 41, 17);
-    border-radius: 0.35em;
+ 
+div.container{
+    width: 70vw;
+    height: 80vh;
     margin: auto;
-    margin-bottom: 16px;
-    width: 85%;
-}
-
-#background{
-    background-color: #091a34;
-    border-radius: 10px;
-    
-
 }
 
  a{
