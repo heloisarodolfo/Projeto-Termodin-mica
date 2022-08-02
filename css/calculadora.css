@@ -1,0 +1,146 @@
+body {
+    background-color: rgb(22, 22, 22); 
+
+}
+
+h1{
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    background-color: rgb(31, 31, 31);
+    padding: 4rem;
+    border-radius: 10px;
+    border-bottom: 5px solid rgb(130, 32, 221);
+}
+
+#background{
+    background-color: rgb(36, 36, 36);
+    border-radius: 10px;
+
+}
+
+a{
+    font-family: 'Kanit', sans-serif;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: large;
+    transition: 0.2s;
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
+
+ a:hover{
+    background-color: rgb(46, 46, 46);
+    color: rgb(130, 32, 221);
+}
+
+#button1 {
+    font-size: 0.9rem;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    background-color: rgb(46, 46, 46);
+    border: 0px;
+    border-radius: 10px;
+}
+
+#button1:hover{
+    background-color: rgb(58, 57, 57);
+    color: rgb(171, 81, 255);
+}
+
+#variaçaoenergiaint {
+    color: white;
+    background-color: rgb(31, 31, 31);
+    font-family: 'Rubik', sans-serif;
+    border: 3px solid rgb(31, 31, 31);
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+    margin: 2rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
+    border-bottom: solid 4px rgb(130, 32, 221);
+    border-right: solid 2px rgb(130, 32, 221)
+
+}
+
+#calor1{
+    border-radius: 10px;
+    border: solid 1px white;
+    padding: 3px;
+    border-bottom: solid 2px rgb(130, 32, 221);
+    border-right: solid 2px rgb(130, 32, 221)
+}
+
+#trabalho1{
+    border-radius: 10px;
+    border: solid 1px white;
+    padding: 3px;
+    border-bottom: solid 2px rgb(130, 32, 221);
+    border-right: solid 2px rgb(130, 32, 221);
+}
+
+#trabalhorealizado{
+    color: white;
+    background-color: rgb(31, 31, 31);
+    font-family: 'Rubik', sans-serif;
+    border: 3px solid rgb(31, 31, 31);
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+    margin: 2rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
+    border-bottom: solid 4px rgb(130, 32, 221);
+    border-right: solid 2px rgb(130, 32, 221)
+
+}
+
+#fonteq{
+    border-radius: 10px;
+    border: solid 1px white;
+    padding: 3px;
+    border-bottom: solid 2px rgb(130, 32, 221);
+    border-right: solid 2px rgb(130, 32, 221)
+}
+
+#fontef{
+    border-radius: 10px;
+    border: solid 1px white;
+    padding: 3px;
+    border-bottom: solid 2px rgb(130, 32, 221);
+    border-right: solid 2px rgb(130, 32, 221);
+}
+
+#rendimento{
+    color: white;
+    background-color: rgb(31, 31, 31);
+    font-family: 'Rubik', sans-serif;
+    border: 3px solid rgb(31, 31, 31);
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+    margin: 2rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
+    border-bottom: solid 4px rgb(130, 32, 221);
+    border-right: solid 2px rgb(130, 32, 221)
+
+}
+
+#trabrendimento{
+    border-radius: 10px;
+    border: solid 1px white;
+    padding: 3px;
+    border-bottom: solid 2px rgb(130, 32, 221);
+    border-right: solid 2px rgb(130, 32, 221)
+}
+
+#quenterendimento{
+    border-radius: 10px;
+    border: solid 1px white;
+    padding: 3px;
+    border-bottom: solid 2px rgb(130, 32, 221);
+    border-right: solid 2px rgb(130, 32, 221);
+}

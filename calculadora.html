@@ -17,6 +17,7 @@
     <header>
         <h1>Calculadora</h1>
     </header>
+
     <div id="trabalhorealizado">
         <h2>Trabalho Realizado (τ)</h2>
         <p>Insira o valor da Fonte Quente (Q1)</p>
@@ -29,7 +30,15 @@
         <p>Resultado</p>
         <p id="saidatrab"></p>
         <input type="button" value="Limpar" onclick="limpartrab()" id="button1">
+
         <script>
+            let calculo2 = []
+
+            let trabrendimento = ""
+            let quenterendimento = ""
+            let resultado = ""
+
+            calculo2.push([trabrendimento,quenterendimento,resultado])   
 
             function calculartrab() {
 
@@ -81,13 +90,11 @@
                 var resprend = rendtrab / rendquente
                 document.getElementById("saidarend").innerHTML = resprend
 
-                localStorage.setItem('resprend', resprend)
-                localStorage.setItem('quenterendimento', quenterendimento)
-                localStorage.setItem('trabrendimento', trabrendimento)
-                if (localStorage.getItem('resprend') != null) {
-                    var SaidaRend = JSON.parse(localStorage.getItem('resprend'))
+                localStorage.setItem("calculo2", JSON.stringify(calculo2))
+                calculo2 = JSON.parse(lolcalStorage.getItem("calculo2"))
+            
             }
-        }
+    
 
             function limparrend() {
                 trabrendimento = (" ")
