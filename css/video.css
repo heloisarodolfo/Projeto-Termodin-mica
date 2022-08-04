@@ -83,3 +83,14 @@ a{
 #txtfooter {
     padding: 2rem;
 }
+
+div#experimento{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+div#experimento > iframe{
+    margin: auto;
+    text-align: center;
+}
