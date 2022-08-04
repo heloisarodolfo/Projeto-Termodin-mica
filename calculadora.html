@@ -7,16 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="css/calculadora.css">
+    <link rel="shortcut icon" href="./img/logosemfundo2.png" />
 </head>
  
 <body>
-    <div>
-        <br>
-        <a href="index.html">Voltar</a>
-    </div>
+   <div id="background">
     <header>
         <h1>Calculadora</h1>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Pagina Inicial</a></li>
+            <li><a href="editorial.html">Editorial</a></li>
+            <li><a href="explicaçao.html">Explicação das Leis</a></li>
+            <li><a href="aplicaçoes.html">Aplicações no Cotidiano</a></li>
+            <li><a href="referencias.html">Referências</a></li>
+            <li><a href="video.html">Máquina Funcionando</a></li>
+            <li><a href="erros.html">Erros de Gravação</a></li>
+        </ul>
+    </nav>
+   </div>
+    
  
     <div id="trabalhorealizado">
         <h2>Trabalho Realizado (τ)</h2>
@@ -45,19 +57,15 @@
  
                 var resultado = fonteQ - fonteF
                 document.getElementById("saidatrab").innerHTML = resultado
- 
+                
+                if (localStorage.getItem('calculosTrab') != null){
+                    calculosTrab = JSON.parse(localStorage.getItem('calculosTrab'))
+                }
                 calculosTrab.push([fonteQ, fonteF, resultado])
                 localStorage.setItem("calculosTrab", JSON.stringify(calculosTrab))
  
                 calculosTrab = JSON.parse(localStorage.getItem("calculosTrab"))
  
-                /*
-                localStorage.setItem('resptrab', resultado)
-                localStorage.setItem('fontecalor', quente)
-                localStorage.setItem('fontefria', fria)
-                if (localStorage.getItem('resptrab') != null) {
-                    var RespostaTrab = JSON.parse(localStorage.getItem('resptrab'))
-                } */
             }
  
             function limpartrab() {
@@ -93,17 +101,19 @@
                 var quenteRendimento = document.getElementById("quenterendimento").value
                 trabRendimento = Number(trabRendimento)
                 quenteRendimento = Number(quenteRendimento)
-                var resultRend = trabRendimento / quenteRendimento
+                var resultRend = 1 - (trabRendimento / quenteRendimento)
                 document.getElementById("saidarend").innerHTML = resultRend
  
+                if (localStorage.getItem('calculosRendimento') != null){
+                    calculosRendimento = JSON.parse(localStorage.getItem('calculosRendimento'))
+                }
                 calculosRendimento.push([trabRendimento, quenteRendimento, resultRend])
  
                 localStorage.setItem("calculosRendimento", JSON.stringify(calculosRendimento))
  
                 calculosRendimento = JSON.parse(localStorage.getItem("calculosRendimento"))
  
-                /* localStorage.setItem("calculo2", JSON.stringify(calculo2))
-                calculo2 = JSON.parse(lolcalStorage.getItem("calculo2")) */
+            
             }
  
             function limparrend() {
@@ -142,16 +152,14 @@
                 var resultadoEnergia = calor1 - trabalho1
                 document.getElementById("saidaenergint").innerHTML = resultadoEnergia
  
+                if (localStorage.getItem('calculosEnergiaInt') != null){
+                    calculosEnergiaInt = JSON.parse(localStorage.getItem('calculosEnergiaInt'))
+                }
                 calculosEnergiaInt.push([calor1, trabalho1, resultadoEnergia])
  
                 localStorage.setItem("calculosEnergiaInt", JSON.stringify(calculosEnergiaInt))
                 calculosEnergiaInt = JSON.parse(localStorage.getItem("calculosEnergiaInt"))
  
-                /* localStorage.setItem('res', res)
-                localStorage.setItem('calor1', calor1)
-                localStorage.setItem('trabalho1', trabalho1)
-                if (localStorage.getItem('res') != null) {
-                    var RespostaTrab = JSON.parse(localStorage.getItem('res')) */
             }
  
             function limparenergint() {
@@ -164,7 +172,21 @@
  
         </script>
     </div>
- 
+    <footer id="footer">
+        <p id="txtfooter">Grupo Grape
+            <br>
+            <br>
+            Membros: Heloisa C. Rodolfo, Matheus Santana, Maria Eduarda S. Fortuna,
+             Gabriel Zanela, Carine Amiratti e Kauã Martins
+             <br>
+             <br>
+             Turma 2A
+            <br>
+            <br>
+            SENAI CTAI
+        </p>
+            
+    </footer>
 </body>
  
 </html>
